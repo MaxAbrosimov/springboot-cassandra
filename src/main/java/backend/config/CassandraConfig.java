@@ -1,3 +1,4 @@
+/*
 package backend.config;
 
 
@@ -40,3 +41,4 @@ public class CassandraConfig extends AbstractCassandraConfiguration {
         return new String[]{"backend.domain"};
     }
 }
+*/

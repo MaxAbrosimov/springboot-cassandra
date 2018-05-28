@@ -11,7 +11,7 @@ public interface ProductService {
 
     List<ProductDto> listAll();
 
-    Product getById(UUID id);
+    ProductDto getById(UUID id);
 
     ProductDto saveOrUpdate(ProductDto product);
 

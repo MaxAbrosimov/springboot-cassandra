@@ -18,7 +18,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 public class ProductController {
 
     @Autowired
-    ProductService productService;
+    private ProductService productService;
 
     @PostMapping(value = "/products/save", produces = APPLICATION_JSON_VALUE)
     @ResponseStatus(OK)
@@ -34,7 +34,7 @@ public class ProductController {
 
     @GetMapping(value = "/products/{pid}", produces = APPLICATION_JSON_VALUE)
     @ResponseStatus(OK)
-    public ResponseEntity<Product> load(@PathVariable String pid) {
+    public ResponseEntity<ProductDto> load(@PathVariable String pid) {
         return new ResponseEntity<>(productService.getById(UUID.fromString(pid)), OK);
     }
 
